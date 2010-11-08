@@ -25,7 +25,7 @@
 #  limitations under the License.
 #
 
-VERSION = (0, 1, 4, 'final', 0)
+VERSION = (0, 1, 5, 'final', 0)
 
 def get_version():
     version = '%d.%d.%d' % (VERSION[0], VERSION[1], VERSION[2])
@@ -45,15 +45,16 @@ django-postgresql-manager currently supports:
 - Database ownership changing.
 - Control over the connection limit for users and databases.
 - Marking a user as not active.
-- Multiple PostgreSQL roles per Django user. Each user has control over the
-  roles it has created.
+- Multiple PostgreSQL roles and databases per Django user. Each user has
+  control over the roles and databases it has created.
 
 The distribution package includes an example project, which can be used to
 demonstrate the application quickly.
 
-More information about the installation, configuration and usage of this app
-can be found in the *HELP* file inside the distribution package or in the
-project's `wiki <http://www.codetrax.org/projects/django-postgresql-manager/wiki>`_.
+More information about the installation, configuration and usage of this
+application can be found in the *HELP* file inside the distribution package
+or in the project's
+`wiki <http://www.codetrax.org/projects/django-postgresql-manager/wiki>`_.
 
 In case you run into any problems while using this application it is highly
 recommended you file a bug report at the project's
