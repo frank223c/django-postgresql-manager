@@ -6,7 +6,7 @@ Introduction
 This section contains an introduction to *django-postgresql-manager*, including general
 information about how to submit bug reports and make feature requests.
 
-DESCRIPTION_DESCRIPTION_DESCRIPTION
+django-postgresql-manager is a Django based management interface for PostgreSQL users and databases.
 
 Licensed under the *Apache License version 2.0*. More licensing information
 exists in the license_ section.

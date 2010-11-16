@@ -17,7 +17,7 @@ Welcome to the *django-postgresql-manager*'s documentation!
 About this project
 ==================
 
-DESCRIPTION_DESCRIPTION_DESCRIPTION
+django-postgresql-manager is a Django based management interface for PostgreSQL users and databases.
 
 | **Author**: `George Notaras <http://www.g-loaded.eu/>`_
 | **Development Web Site**: `django-postgresql-manager project <http://www.codetrax.org/projects/django-postgresql-manager>`_

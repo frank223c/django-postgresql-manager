@@ -3,7 +3,7 @@
 #
 #  This file is part of django-postgresql-manager.
 #
-#  DESCRIPTION_DESCRIPTION_DESCRIPTION
+#  django-postgresql-manager is a Django based management interface for PostgreSQL users and databases.
 #
 #  Development Web Site:
 #    - http://www.codetrax.org/projects/django-postgresql-manager
@@ -66,7 +66,7 @@ if __name__=='__main__':
         maintainer = 'George Notaras',
         maintainer_email = 'gnot [at] g-loaded.eu',
         url = 'http://www.codetrax.org/projects/django-postgresql-manager',
-        description = 'DESCRIPTION_DESCRIPTION_DESCRIPTION',
+        description = 'django-postgresql-manager is a Django based management interface for PostgreSQL users and databases.',
         long_description = read('README'),
         download_url = 'https://source.codetrax.org/hgroot/django-postgresql-manager',
         platforms=['any'],

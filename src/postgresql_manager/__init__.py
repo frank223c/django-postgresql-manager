@@ -2,7 +2,7 @@
 #
 #  This file is part of django-postgresql-manager.
 #
-#  DESCRIPTION_DESCRIPTION_DESCRIPTION
+#  django-postgresql-manager is a Django based management interface for PostgreSQL users and databases.
 #
 #  Development Web Site:
 #    - http://www.codetrax.org/projects/django-postgresql-manager
@@ -32,8 +32,7 @@ def get_version():
 
 
 long_description = """
-*django-postgresql-manager* is a Django application which can be used to manage
-PostgreSQL users and databases using a web interface.
+
 
 
 
