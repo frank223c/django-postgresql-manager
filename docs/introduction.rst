@@ -15,8 +15,18 @@ exists in the license_ section.
 Features
 ========
 
-- Feature A
-- Feature B
+django-postgresql-manager currently supports:
+
+- User (role) creation/deletion/renaming.
+- Database creation/deletion/renaming.
+- Database ownership changing.
+- Control over the connection limit for users and databases.
+- Marking a user as not active.
+- Multiple PostgreSQL roles and databases per Django user. Each user has
+  control over the roles and databases it has created.
+
+The distribution package includes an example project, which can be used to
+demonstrate the application quickly.
 
 
 Documentation
