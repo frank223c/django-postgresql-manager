@@ -29,12 +29,12 @@ from django.db.models.loading import cache
 
 
 def dbms_drop_role(sender, **kwargs):
-    PgUser = cache.get_model('PostgreSQL_manager', 'PgUser')
+    PgUser = cache.get_model('postgresql_manager', 'PgUser')
     instance = kwargs['instance']
     PgUser.objects.drop_role(instance.name)
 
     
 def dbms_drop_database(sender, **kwargs):
-    PgDatabase = cache.get_model('PostgreSQL_manager', 'PgDatabase')
+    PgDatabase = cache.get_model('postgresql_manager', 'PgDatabase')
     instance = kwargs['instance']
     PgDatabase.objects.drop_database(instance.name)

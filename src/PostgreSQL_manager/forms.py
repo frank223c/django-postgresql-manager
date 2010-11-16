@@ -31,13 +31,13 @@ import string
 from django import forms
 from django.db.models.loading import cache
 
-from PostgreSQL_manager import settings
+from postgresql_manager import settings
 
 
 class PgUserModelForm(forms.ModelForm):
 
     class Meta:
-        model = cache.get_model('PostgreSQL_manager', 'PgUser')
+        model = cache.get_model('postgresql_manager', 'PgUser')
     
     # Adds two extra password fields, which will be used for password confirmation.
     password1 = forms.CharField(label='Password', required=False, widget=forms.PasswordInput, help_text="Valid characters a-z, A-Z, 0-9 and the underscore '_'")
@@ -85,7 +85,7 @@ class PgUserModelForm(forms.ModelForm):
 class PgDatabaseModelForm(forms.ModelForm):
 
     class Meta:
-        model = cache.get_model('PostgreSQL_manager', 'PgDatabase')
+        model = cache.get_model('postgresql_manager', 'PgDatabase')
     
     def clean_name(self):
         name = self.cleaned_data.get('name')

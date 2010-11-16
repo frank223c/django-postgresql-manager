@@ -29,8 +29,8 @@
 from django.db import models
 from django.db.models import signals
 
-from PostgreSQL_manager import signal_cb
-from PostgreSQL_manager import managers
+from postgresql_manager import signal_cb
+from postgresql_manager import managers
 
 
 
@@ -60,7 +60,7 @@ signals.pre_delete.connect(signal_cb.dbms_drop_role, sender=PgUser)
 class PgDatabase(models.Model):
     
     name = models.SlugField(verbose_name='name', max_length=100, db_index=True, unique=True, help_text='''Enter a name for the PostgreSQL database.''')
-    owner = models.ForeignKey('PostgreSQL_manager.PgUser', related_name='%(class)s_owner', help_text='''Select an owner for this database.''')
+    owner = models.ForeignKey('postgresql_manager.PgUser', related_name='%(class)s_owner', help_text='''Select an owner for this database.''')
     connlimit = models.IntegerField(verbose_name='connection limit', default=-1, help_text='''Enter the number of concurrent connections that can be made to this database. -1 (the default) means no limit.''')
     
     date_created = models.DateTimeField(verbose_name='created on', auto_now_add=True)
