@@ -2,7 +2,7 @@
 # For a full list of the supported settings visit:
 # http://docs.djangoproject.com/en/dev/ref/settings/
 
-# Add the path of PostgreSQL_manager parent's dir
+# Add the path of postgresql_manager parent's dir
 import os
 import sys
 sys.path.insert(0, os.path.join(os.path.dirname(__file__), '..', '..', 'src'))
@@ -17,8 +17,8 @@ DATABASES = {
         'ENGINE': 'django.db.backends.sqlite3',
         'NAME': 'test.db',
     },
-    # Database connection settings for PostgreSQL_manager
-    'PostgreSQL_manager_conn': {
+    # Database connection settings for postgresql_manager
+    'postgresql_manager_conn': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
         'NAME': 'postgres',  # Database name
         'USER': 'administrator',
@@ -103,6 +103,6 @@ INSTALLED_APPS = (
     # Uncomment the next line to enable the admin:
     'django.contrib.admin',
     # PostgreSQL Manager
-    'PostgreSQL_manager',
+    'postgresql_manager',
 )
 

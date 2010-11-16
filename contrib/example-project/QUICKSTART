@@ -18,7 +18,7 @@ Then load the example project's settings file in a text editor::
 
     vi settings.py
 
-And make sure the ``PostgreSQL_manager_conn`` database connection settings
+And make sure the ``postgresql_manager_conn`` database connection settings
 are correct, otherwise the Django project won't be able to connect to the
 PostgreSQL Cluster.
 
