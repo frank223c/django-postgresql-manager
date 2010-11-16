@@ -2,8 +2,7 @@
 #
 #  This file is part of django-postgresql-manager.
 #
-#  django-postgresql-manager - a Django application which can be used to manage
-#  PostgreSQL users and databases.
+#  DESCRIPTION_DESCRIPTION_DESCRIPTION
 #
 #  Development Web Site:
 #    - http://www.codetrax.org/projects/django-postgresql-manager
@@ -24,7 +23,6 @@
 #  See the License for the specific language governing permissions and
 #  limitations under the License.
 #
-
 
 import string
 
