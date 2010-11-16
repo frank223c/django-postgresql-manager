@@ -3,8 +3,7 @@
 #
 #  This file is part of django-postgresql-manager.
 #
-#  django-postgresql-manager - a Django application which can be used to manage
-#  PostgreSQL users and databases.
+#  DESCRIPTION_DESCRIPTION_DESCRIPTION
 #
 #  Development Web Site:
 #    - http://www.codetrax.org/projects/django-postgresql-manager
@@ -51,7 +50,11 @@ sys.path.insert(0, os.path.abspath('src'))
 
 from setuptools import setup
 
-from PostgreSQL_manager import get_version, long_description
+from postgresql_manager import get_version
+
+def read(fname):
+    """Utility function to read the README file."""
+    return open(os.path.join(os.path.dirname(__file__), fname)).read()
 
 if __name__=='__main__':
     setup(
@@ -63,9 +66,10 @@ if __name__=='__main__':
         maintainer = 'George Notaras',
         maintainer_email = 'gnot [at] g-loaded.eu',
         url = 'http://www.codetrax.org/projects/django-postgresql-manager',
-        description = 'A Django application which can be used to manage PostgreSQL users and databases.',
-        long_description = long_description,
+        description = 'DESCRIPTION_DESCRIPTION_DESCRIPTION',
+        long_description = read('README'),
         download_url = 'https://source.codetrax.org/hgroot/django-postgresql-manager',
+        platforms=['any'],
         classifiers = [
             'Development Status :: 4 - Beta',
             'Environment :: Web Environment',
@@ -75,13 +79,12 @@ if __name__=='__main__':
             'Natural Language :: English',
             'Operating System :: OS Independent',
             'Programming Language :: Python',
-            'Topic :: Database :: Front-Ends',
             'Topic :: Internet :: WWW/HTTP :: Dynamic Content',
             'Topic :: Software Development :: Libraries :: Application Frameworks',
             'Topic :: Software Development :: Libraries :: Python Modules',
         ],
         package_dir = {'': 'src'},
-        packages = ['PostgreSQL_manager'],
+        packages = ['postgresql_manager'],
         include_package_data = True,
         #zip_safe = False,
     )
