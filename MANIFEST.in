@@ -7,7 +7,7 @@ include MANIFEST.in
 include requirements.txt
 include setup.cfg
 include setup.py
-include contrib/example-project/QUICKSTART
-recursive-include contrib/example-project *.py
+include example/README.txt
+recursive-include example/ *.py
 recursive-include src/postgresql_manager *.py
 graft docs
