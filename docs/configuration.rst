@@ -82,5 +82,5 @@ Synchronize the project database
 
 Finally, synchronize the project's database using the following command::
 
-    python manage.py syncdb
+    python manage.py migrate
 
