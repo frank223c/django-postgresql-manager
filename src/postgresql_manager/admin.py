@@ -26,7 +26,12 @@
 
 
 from django.contrib import admin
-from django.db.models.loading import cache
+try:
+    from django.apps import apps
+    get_model = apps.get_model
+except ImportError:
+    from django.db.models.loading import cache
+    get_model = cache.get_model
 from django.db.utils import DatabaseError, IntegrityError
 from django.contrib import messages
 
@@ -66,7 +71,7 @@ class PgUserAdmin(admin.ModelAdmin):
         return qs.filter(created_by=request.user)
     
     def save_model(self, request, obj, form, change):
-        PgUser = cache.get_model('postgresql_manager', 'PgUser')
+        PgUser = get_model('postgresql_manager', 'PgUser')
         password = form.cleaned_data.get('password1')
         
         if not change:  # User creation form
@@ -98,7 +103,7 @@ class PgUserAdmin(admin.ModelAdmin):
         # Save the model
         obj.save()
 
-admin.site.register(cache.get_model('postgresql_manager', 'PgUser'), PgUserAdmin)
+admin.site.register(get_model('postgresql_manager', 'PgUser'), PgUserAdmin)
 
 
 
@@ -127,7 +132,7 @@ class PgDatabaseAdmin(admin.ModelAdmin):
         return super(PgDatabaseAdmin, self).get_readonly_fields(request, obj)
     
     def formfield_for_foreignkey(self, db_field, request, **kwargs):
-        PgUser = cache.get_model('postgresql_manager', 'PgUser')
+        PgUser = get_model('postgresql_manager', 'PgUser')
         if db_field.name == 'owner':
             if not request.user.is_superuser:
                 kwargs['queryset'] = PgUser.objects.filter(created_by=request.user)
@@ -140,7 +145,7 @@ class PgDatabaseAdmin(admin.ModelAdmin):
         return qs.filter(created_by=request.user)
     
     def save_model(self, request, obj, form, change):
-        PgDatabase = cache.get_model('postgresql_manager', 'PgDatabase')
+        PgDatabase = get_model('postgresql_manager', 'PgDatabase')
         
         if not change:  # Database creation form
             
@@ -163,6 +168,6 @@ class PgDatabaseAdmin(admin.ModelAdmin):
         # Save the model
         obj.save()
 
-admin.site.register(cache.get_model('postgresql_manager', 'PgDatabase'), PgDatabaseAdmin)
+admin.site.register(get_model('postgresql_manager', 'PgDatabase'), PgDatabaseAdmin)
 
 

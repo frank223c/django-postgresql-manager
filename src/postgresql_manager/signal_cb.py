@@ -24,16 +24,21 @@
 #  limitations under the License.
 #
 
-from django.db.models.loading import cache
+try:
+    from django.apps import apps
+    get_model = apps.get_model
+except ImportError:
+    from django.db.models.loading import cache
+    get_model = cache.get_model
 
 
 def dbms_drop_role(sender, **kwargs):
-    PgUser = cache.get_model('postgresql_manager', 'PgUser')
+    PgUser = get_model('postgresql_manager', 'PgUser')
     instance = kwargs['instance']
     PgUser.objects.drop_role(instance.name)
 
     
 def dbms_drop_database(sender, **kwargs):
-    PgDatabase = cache.get_model('postgresql_manager', 'PgDatabase')
+    PgDatabase = get_model('postgresql_manager', 'PgDatabase')
     instance = kwargs['instance']
     PgDatabase.objects.drop_database(instance.name)
