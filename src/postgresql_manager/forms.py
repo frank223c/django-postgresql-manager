@@ -41,6 +41,7 @@ class PgUserModelForm(forms.ModelForm):
 
     class Meta:
         model = get_model('postgresql_manager', 'PgUser')
+        fields = '__all__'
     
     # Adds two extra password fields, which will be used for password confirmation.
     password1 = forms.CharField(label='Password', required=False, widget=forms.PasswordInput, help_text="Valid characters a-z, A-Z, 0-9 and the underscore '_'")
@@ -89,6 +90,7 @@ class PgDatabaseModelForm(forms.ModelForm):
 
     class Meta:
         model = get_model('postgresql_manager', 'PgDatabase')
+        fields = '__all__'
     
     def clean_name(self):
         name = self.cleaned_data.get('name')
