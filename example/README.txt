@@ -53,14 +53,15 @@ python /path/to/django-admin.py" startproject testproject
 Eg:
 python "C:\Program Files\Python27\Scripts\django-admin.py" startproject testproject
 
-cd testproject
-
-urls.py
-
-uncomment the admin related lines in urls.py
+cd testproject/testproject
 
 
 settings.py
+
+# Add the path of postgresql_manager parent's dir
+import os
+import sys
+sys.path.insert(0, os.path.join(os.path.dirname(__file__), '..', '..', 'src'))
 
 
     DATABASES = {
@@ -82,20 +83,9 @@ settings.py
 
     INSTALLED_APPS = (
         ...
-        # Uncomment the next line to enable the admin:
-        'django.contrib.admin',
         # PostgreSQL Manager
         'postgresql_manager',
         ...
     )
 
-# Add the path of postgresql_manager parent's dir
-import os
-import sys
-sys.path.insert(0, os.path.join(os.path.dirname(__file__), '..', '..', 'src'))
-
-    # Uncomment the next line to enable the admin:
-    'django.contrib.admin',
-    # PostgreSQL Manager
-    'postgresql_manager',
 
