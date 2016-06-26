@@ -67,7 +67,7 @@ if __name__=='__main__':
         maintainer_email = 'gnot [at] g-loaded.eu',
         url = 'http://www.codetrax.org/projects/django-postgresql-manager',
         description = 'django-postgresql-manager is a Django based management interface for PostgreSQL users and databases.',
-        long_description = read('README'),
+        long_description = read('README.rst'),
         download_url = 'https://source.codetrax.org/hgroot/django-postgresql-manager',
         platforms=['any'],
         classifiers = [
