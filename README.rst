@@ -3,7 +3,7 @@ django-postgresql-manager
 
 | **Author**: `George Notaras <http://www.g-loaded.eu/>`_
 | **Development Web Site**: `django-postgresql-manager project <http://www.codetrax.org/projects/django-postgresql-manager>`_
-| **Source Code Repository**: `django-postgresql-manager source code <https://source.codetrax.org/hgroot/django-postgresql-manager>`_
+| **Source Code Repository**: `django-postgresql-manager source code <https://bitbucket.org/gnotaras/django-postgresql-manager>`_
 | **Documentation**: `django-postgresql-manager documentation <http://packages.python.org/django-postgresql-manager>`_
 | **Downloads**: `django-postgresql-manager releases <http://pypi.python.org/pypi/django-postgresql-manager>`_
 
